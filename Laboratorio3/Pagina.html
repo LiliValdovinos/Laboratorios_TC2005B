@@ -1,0 +1,185 @@
+<!-- LAB3 -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Personal</title>
+    <link rel="stylesheet" href="PaginaStyles.css">
+</head>
+<body>
+    <header>
+        <h1>Mi Página Personal</h1>
+        <p>Nombre: Liliana Valdovinos Catarino</p>
+        <p>Matrícula: A01712128</p>
+        <p>Correo: A01712128@tec.mx</p>
+        <p>Teléfono: 5574659918</p>
+    </header>
+    
+    <nav>
+        <button onclick="window.location.href='#sobre-mi'">Sobre Mí</button>
+        <button onclick="window.location.href='#proyectos'">Proyectos</button>
+        <button onclick="window.location.href='#preguntas'">Preguntas</button>
+        <button onclick="window.location.href='#referencias'">Referencias</button>
+    </nav>
+    
+    <section id="sobre-mi">
+        <h2>Sobre Mí</h2>
+        <p>Me gusta que me digan Lili, tengo 20 años y soy estudiante en la carrera de Ingenieria en Tecnologías Computacionales en el Tec de Monterrey.</p>
+        <p>Me apasiona la tecnología, el desarrollo web y la parte de ciberseguridad. He trabajo en proyectos personales relacionados con estas áreas y también otros proyectos para un restaurante.</p>
+    </section>
+    
+    <section id="proyectos">
+        <h2>Mis Proyectos</h2>
+        <div>
+            <h3>BalanceaTec</h3>
+            <p>Un sistema IoT para la optimización del transporte de sustancias, asegurando precisión y seguridad en la operación.</p>
+        </div>
+        <div>
+            <h3>Juego de matemáticas</h3>
+            <p>Juego de ahorcados de matemáticas sobre operaciones básicas para niños de primaria </p>
+        </div>
+        <div>
+            <h3>Restaurante Página Web</h3>
+            <p>Página web sobre una pozoleria (reservaciones, contacto, menú, sobre ellos, dirección)</p>
+        </div>
+        <div>
+            <h3>Sistema de gestión de ventas e inventario</h3>
+            <p>Sistema de ventas donde los meseros toman ordenes desde sus teléfonos y el administrador visualiza mesas, platillos solicitados en tiempo real y selecciona la manera de pago (efectivo/tarjeta)</p>
+        </div>
+    </section>
+    
+    <section id="preguntas">
+        <h2>Preguntas A Responder</h2>
+        <h3>¿Cuál es la diferencia entre Internet y la World Wide Web?</h3>
+        <p>Internet es la red global de computadoras(red que conecta redes de ordenadores de todo el mundo), 
+            <br>mientras que la WWW es un sistema de información basado en hipervínculos (servicio que presta Internet.).</p>
+        
+        <h3>¿Cuáles son las partes de un URL?</h3>
+        <ul>
+            <li>Protocolo</li>
+            <li>Sudominio</li>
+            <li>Dominio</li>
+            <li>TLD</li>
+            <li>Subcarpeta</li>
+            <li>Slug</li>
+            <li>Parámetros</li>
+            <img src="https://static.semrush.com/blog/uploads/media/fa/fe/fafe931ac85fc1c5b628299e399a2870/original.png" alt="" width="700">
+        </ul>
+        
+        <h3>¿Cuál es el propósito de los métodos HTTP?</h3>
+        <ul>
+            <li>GET: Solicita datos del servidor.</li>
+            <li>HEAD: Obtiene los encabezados de la respuesta sin el cuerpo.</li>
+            <li>POST: Envía datos al servidor para su procesamiento.</li>
+            <li>PUT: Actualiza un recurso existente en el servidor.</li>
+            <li>PATCH: Modifica parcialmente un recurso en el servidor.</li>
+            <li>DELETE: Elimina un recurso en el servidor.</li>
+        </ul>
+
+        <h3>¿Qué método HTTP se usa al enviar formularios?</h3>
+        <p>El método POST, porque envía los datos de manera segura al servidor.</p>
+
+        <h3>¿Qué método HTTP se utiliza cuando a través de un navegador web se accede a una página a través de un URL?</h3>
+        <p>El método GET, ya que permite solicitar recursos sin modificar información en el servidor.</p>
+        
+        <h3>Un servidor web devuelve una respuesta HTTP con código 200. ¿Qué significa esto? ¿Ocurrió algún error?</h3>
+        <p>El código 200 indica que la solicitud fue exitosa y que el servidor devolvió la información sin errores.</p>
+        
+        <h3>¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 404? ¿Por qué?</h3>
+        <p>Sí, porque el error 404 indica que un recurso no fue encontrado, lo que puede deberse a un enlace roto o un archivo eliminado.</p>
+        
+        <h3>¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 500? ¿Por qué?</h3>
+        <p>Sí, ya que un error 500 indica un problema interno en el servidor, generalmente debido a fallos en el código.</p>
+        
+        <h3>¿Qué significa que un atributo HTML5 esté depreciado o desaprobado (deprecated)?</h3>
+        <p>Significa que ya no se recomienda su uso porque puede ser eliminado en futuras versiones del estándar HTML.</p>
+        
+        <h3>Menciona algunos elementos de HTML 4 que en HTML5 estén desaprobados.</h3>
+        <ul>
+            <li>&lt;font&gt;</li>
+            <li>&lt;center&gt;</li>
+            <li>&lt;applet&gt;</li>
+            <li>&lt;acronym&gt;</li>
+        </ul>
+        
+        <h3>¿Cuáles son las diferencias principales entre HTML 4 y HTML5?</h3>
+        <ul>
+            <li>HTML5 introduce nuevas etiquetas semánticas.</li>
+            <li>Mejor soporte para multimedia con etiquetas &lt;audio&gt; y &lt;video&gt;.</li>
+            <li>Elimina elementos obsoletos como &lt;font&gt;.</li>
+            <li>Soporta API para almacenamiento local y aplicaciones web.</li>
+        </ul>
+        
+        <h3>¿Qué componentes de estructura y estilo tiene una tabla?</h3>
+        <ul>
+            <li>Contenedor de tabla (&lt;table&gt;)</li>
+            <li>Encabezados (&lt;thead&gt;)</li>
+            <li>Cuerpo (&lt;tbody&gt;)</li>
+            <li>Columnas (&lt;th&gt;)</li>
+            <li>Filas (&lt;tr&gt;)</li>
+            <li>Pie de tabla (&lt;tfoot&gt;)</li>
+        </ul>
+        
+        <h3>¿Cuáles son los principales controles de una forma HTML5?</h3>
+        <ul>
+            <li>Input</li>
+            <li>Textarea</li>
+            <li>Button</li>
+            <li>Form</li>
+            <li>Label</li>
+            <li>Fieldset</li>
+        </ul>
+        
+        <h3>¿Cuál es el ciclo de vida de los sistemas de información?</h3>
+        <p>El ciclo de vida de los sistemas de información consta de planificación, análisis, diseño, implementación y mantenimiento.</p>
+        <img src="https://www.tecnologias-informacion.com/ciclo.jpg" alt="" width="700">
+        
+        <h3>¿Cuál es el ciclo de desarrollo de sistemas de información?</h3>
+        <p>Incluye análisis de requerimientos, diseño, desarrollo, pruebas, implementación y mantenimiento.</p>
+        <img src="https://3.bp.blogspot.com/-MsM4zZUkEco/TdCEf0LJmCI/AAAAAAAAAFI/KgBNlOxRtOg/s1600/ciclo_de_vida.jpg" alt="" width="700">
+
+        <h3>¿Cuál es tu recomendación sobre el uso de !important en un CSS?</h3>
+        <p>El uso de !important en CSS debe ser limitado, ya que puede dificultar la mantenibilidad del código y causar conflictos con otras reglas de estilo. 
+            <br>Se recomienda utilizarlo solo en casos específicos donde sea necesario anular reglas heredadas de hojas de estilo externas o librerías.</p>
+
+        <h3>Si se pone una imagen de fondo en una página HTML, ¿por qué debe escogerse con cuidado?</h3>
+        <p>Las imágenes de fondo deben elegirse cuidadosamente porque pueden afectar la legibilidad del contenido, el rendimiento de la página y la experiencia del usuario. 
+            <br> Se recomienda usar imágenes optimizadas, de tamaño adecuado y con un contraste adecuado para evitar distracciones o problemas de accesibilidad.</p>
+
+        <h3>¿Cuál es tu recomendación al elegir las unidades de una propiedad de estilo entre %, px y pt?</h3>
+        <p>La elección de unidades depende del contexto:
+            <ul>
+                <li><strong>%</strong>: Ideal para diseños responsivos, ya que se adapta al tamaño del contenedor padre.</li>
+                <li><strong>px</strong>: Útil para diseños con medidas fijas y elementos que no necesitan escalabilidad.</li>
+                <li><strong>pt</strong>: Se usa más en impresión, pero no es recomendable para diseño web debido a su falta de adaptabilidad.</li>
+            </ul>
+        </p>
+
+        <h3>¿Por qué el uso de una versión minimizada del CSS mejora el rendimiento del sitio?</h3>
+        <p>El CSS minimizado mejora el rendimiento porque reduce el tamaño del archivo eliminando espacios, comentarios y caracteres innecesarios. 
+            <br>Esto disminuye el tiempo de carga y optimiza el rendimiento general del sitio web, especialmente en conexiones lentas.</p>
+
+    </section>
+    
+    <section id="referencias">
+        <h2>Referencias</h2>
+        <ol>
+            <li><a href="https://diferente.online/diferencias-entre-internet-y-la-world-wide-web-que-las-distingue/">Internet y la World Wide Web</a></li>
+            <li><a href="https://www.semrush.com/blog/what-is-a-url/">URL structure</a></li>
+            <li><a href="https://keepcoding.io/blog/metodos-de-peticion-http/#GET">Métodos de petición HTTP</a></li>
+            <li><a href="https://tecnobits.com/en/que-significa-el-codigo-de-error-200-y-como-solucionarlo/">Código 200</a></li>
+            <li><a href="https://www.hostgator.mx/blog/paginas-de-error/">Errores</a></li>
+            <li><a href="https://www.alvareznavarro.es/desarrollo-web/2011/01/html-5-elementos-obsoletos">Elementos desaprobados en HTML5</a></li>
+            <li><a href="https://www.byronvargas.com/web/cual-es-la-diferencia-entre-html-4-y-5/#Cual_es_la_diferencia_entre_HTML4_y_HTML5">Diferencias entre HTML5 Y HTML4</a></li>
+            <li><a href="https://www.mclibre.org/consultar/htmlcss/html/html-tablas.html#:~:text=Una%20tabla%20HTML%20(,%3E%20y%20).">Estructura tabla</a></li>
+            <li><a href="https://developer.mozilla.org/es/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls">Forma HTML5</a></li>
+
+        </ol>
+    </section>
+    
+    <footer>
+        <p>Editor: Visual Studio Code - <a href="https://code.visualstudio.com/">Sitio Web</a></p>
+    </footer>
+</body>
+</html>

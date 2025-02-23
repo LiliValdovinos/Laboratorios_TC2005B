@@ -1,0 +1,125 @@
+/* Estilos generales */
+/* Fondo con un degradado en tonos morados */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #f3e5f5, #ce93d8);
+    color: #333;
+}
+
+/* Estilos para el encabezado principal */
+header {
+    background-color: #7b1fa2;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 4px solid #4a148c;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+header p {
+    margin: 5px 0;
+    font-size: 1.2em;
+}
+
+/* Navegación */
+/* Menú de navegación con botones */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    background-color: #6a1b9a;
+    padding: 10px;
+}
+
+/* Estilos para los botones del menú */
+nav button {
+    background-color: #ab47bc;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1em;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+/* Efecto cuando pasas el cursor sobre los botones */
+nav button:hover {
+    background-color: #8e24aa;
+    transform: scale(1.05);
+}
+
+/* Secciones */
+/* Contenedor general de las secciones */
+section {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Títulos de cada sección */
+section h2 {
+    text-align: center;
+    color: #6a1b9a;
+    border-bottom: 3px solid #9c27b0;
+    padding-bottom: 10px;
+}
+
+/* Proyectos */
+/* Contenedor de cada proyecto */
+#proyectos div {
+    background: #f3e5f5;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s;
+}
+
+
+/* Efecto cuando pasas el cursor sobre un proyecto */
+#proyectos div:hover {
+    transform: scale(1.02);
+}
+
+/* Preguntas */
+/* Títulos de las preguntas */
+#preguntas h3 {
+    color: #7b1fa2;
+    margin-top: 20px;
+    border-left: 5px solid #ab47bc;
+    padding-left: 10px;
+}
+
+/* Estilos generales para el texto dentro de la sección de preguntas */
+#preguntas p, #preguntas ul {
+    margin-left: 20px;
+    font-size: 1.1em;
+}
+
+/* Lista numerada de referencias */
+#referencias ol {
+    padding-left: 20px;
+}
+
+
+/* Enlaces de la lista de referencias */
+#referencias a {
+    text-decoration: none;
+    color: #8e24aa;
+    font-weight: bold;
+}
+
+/* Efecto cuando pasas el cursor sobre los enlaces */
+#referencias a:hover {
+    text-decoration: underline;
+}
