@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios de JavaScript</title>
+</head>
+<body>
+
+    <h1>Ejercicios de JavaScript</h1>
+    
+    <h2>Explicación del problema elegido</h2>
+    <p>El problema elegido es un <strong>convertidor de grados Celsius a Fahrenheit</strong>. Se implementa en un objeto en JavaScript con un método que recibe una temperatura en Celsius y devuelve la conversión a Fahrenheit.</p>
+
+    <h2>Respuestas a las preguntas teóricas</h2>
+    <h3>1. ¿Qué diferencias y semejanzas hay entre Java y JavaScript?</h3>
+    <ul>
+        <li>Ambos usan una sintaxis inspirada en C, lo que significa que comparten estructuras como if, for, while, etc.</li>
+        <li>Ambos soportan programación orientada a objetos, aunque de manera diferente (Java usa clases y herencia, mientras que JavaScript utiliza prototipos).</li>
+        <li>Java se utiliza en servidores (backend), mientras que JavaScript es el principal lenguaje de desarrollo web en navegadores (frontend).</li>
+    </ul>
+    
+    <h3>2. ¿Qué métodos tiene el objeto Date? (Menciona al menos 5)</h3>
+    <ul>
+        <li><code>getFullYear()</code>: Devuelve el año actual.</li>
+        <li><code>getMonth()</code>: Devuelve el mes (0-11).</li>
+        <li><code>getDate()</code>: Devuelve el día del mes.</li>
+        <li><code>getDay()</code>: Devuelve el día de la semana (0 para domingo).</li>
+        <li><code>getHours()</code>: Devuelve la hora actual, desde 0 a 23 (24 horas).</li>
+    </ul>
+
+    <h3>3. ¿Qué métodos tienen los arreglos? (Menciona al menos 5)</h3>
+    <ul>
+        <li><code>push()</code>: Agrega un elemento al final del arreglo.</li>
+        <li><code>pop()</code>: Elimina el último elemento del arreglo.</li>
+        <li><code>shift()</code>: Elimina el primer elemento del arreglo.</li>
+        <li><code>unshift()</code>: Agrega un elemento al inicio del arreglo.</li>
+        <li><code>forEach()</code>: Ejecuta una función para cada elemento del arreglo.</li>
+    </ul>
+
+    <h3>4. ¿Cómo se declara una variable con alcance local dentro de una función?</h3>
+    <p>Se usa <code>let</code> o <code>const</code> dentro de una función. Ejemplo:</p>
+    <pre>
+function ejemplo() {
+    let x = 5; // Variable local, solo existe dentro de esta función
+}
+    </pre>
+
+    <h3>5. ¿Qué implicaciones tiene utilizar variables globales dentro de funciones?</h3>
+    <ul>
+        <li>Pueden ser modificadas accidentalmente por cualquier función, causando errores. (Sobreescritura)</li>
+        <li>Ocupamos más memoria, ya que la variable no se elimina al terminar la función.</li>
+        <li>El código es más difícil de depurar porque muchas funciones pueden afectar la misma variable.</li>
+    </ul>
+
+    <h2>Resultados de los ejercicios</h2>
+    <script src="EjerciciosJavaScript.js"></script>
+
+</body>
+</html>
