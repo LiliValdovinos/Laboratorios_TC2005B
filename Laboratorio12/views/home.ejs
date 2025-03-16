@@ -38,21 +38,21 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        M.updateTextFields(); // Soluciona el problema de los labels
+        M.updateTextFields(); 
 
-        // Detectar cambios en los inputs y corregir labels
+        
         let inputs = document.querySelectorAll("input");
         inputs.forEach(input => {
             if (input.value.trim() !== "") {
                 input.nextElementSibling.classList.add("active");
             }
 
-            // Cuando el usuario escriba, activa el label
+            
             input.addEventListener("input", function() {
                 input.nextElementSibling.classList.add("active");
             });
 
-            // Cuando el input pierda el foco, revisa si está vacío
+            
             input.addEventListener("blur", function() {
                 if (input.value.trim() === "") {
                     input.nextElementSibling.classList.remove("active");

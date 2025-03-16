@@ -11,7 +11,7 @@ app.set('views', path.join(__dirname, 'views'));
 // Middleware para procesar formularios
 app.use(bodyParser.urlencoded({ extended: false }));
 
-// Servir archivos estáticos
+// Servir archivos estaticos
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Importar rutas
