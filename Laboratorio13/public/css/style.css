@@ -1,0 +1,62 @@
+/* Fondo general */
+body {
+    background-color: #ffdde1; /* Rosa pastel claro */
+}
+
+/* Navbar */
+nav {
+    background-color: #e91e63 !important; /* Rosa fuerte */
+}
+
+/* Botones */
+.btn {
+    background-color: #009688 !important; /* Verde azulado */
+}
+
+.btn:hover {
+    background-color: #00796b !important; /* Verde más oscuro */
+}
+
+/* Botón de Ver Mensaje */
+.btn.green {
+    background-color: #4caf50 !important; /* Verde estándar */
+}
+
+.btn.green:hover {
+    background-color: #388e3c !important; /* Verde oscuro */
+}
+
+/* Footer */
+footer {
+    background-color: #e91e63; /* Rosa fuerte */
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Formularios */
+.input-field input {
+    color: black; /* Texto negro */
+}
+
+.input-field label {
+    color: #333; /* Gris oscuro */
+}
+
+.input-field input:focus {
+    border-bottom: 2px solid #e91e63 !important; /* Rosa fuerte */
+    box-shadow: 0 1px 0 0 #e91e63 !important;
+}
+
+/* Mensajes de validación */
+#message {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Contenedor principal */
+.container {
+    background-color: #ffdde1; /* Mismo rosa claro de antes */
+    padding: 20px;
+    border-radius: 10px;
+}

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('includes/head.ejs') %>
+<body>
+    <%- include('includes/navbar.ejs') %>
+
+    <div class="container">
+        <h2>Mensaje Guardado</h2>
+        <p><%= mensaje.length > 0 ? mensaje[mensaje.length - 1].texto : "No hay mensajes aún" %></p>
+        <a href="/" class="btn">Volver</a>
+    </div>
+
+    <%- include('includes/footer.ejs') %>
+</body>
+</html>

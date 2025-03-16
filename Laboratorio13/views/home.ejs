@@ -1,0 +1,54 @@
+<%- include('includes/head.ejs') %>
+<%- include('includes/navbar.ejs') %>
+
+<div class="container">
+    <h2 class="center-align">Bienvenido a Laboratorio 13</h2>
+
+    <!-- Validar Contraseña -->
+    <div class="row">
+        <div class="col s12 m8 offset-m2">
+            <h3 class="center-align">Validar Contraseña</h3>
+            <form id="passwordForm">
+                <div class="input-field">
+                    <input type="password" id="password" class="validate" required autocomplete="off">
+                    <label for="password" class="active">Contraseña</label>
+                </div>
+                <div class="input-field">
+                    <input type="password" id="confirmPassword" class="validate" required autocomplete="off">
+                    <label for="confirmPassword" class="active">Confirmar Contraseña</label>
+                </div>
+                <p id="message" class="text center-align"></p>
+                <div class="center-align">
+                    <button type="button" class="btn waves-effect waves-light" onclick="validatePassword()">VALIDAR</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Enviar Mensaje -->
+    <div class="row">
+        <div class="col s12 m8 offset-m2">
+            <h3 class="center-align">Enviar Mensaje</h3>
+            <form action="/mensajes/guardar" method="POST">
+                <div class="input-field">
+                    <input type="text" name="mensaje" id="mensaje" required autocomplete="off">
+                    <label for="mensaje" class="active">Escribe un mensaje</label>
+                </div>
+                <div class="center-align">
+                    <button type="submit" class="btn waves-effect waves-light">ENVIAR</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Ver Mensaje Guardado -->
+    <div class="row center-align">
+        <h3>Ver Mensaje Guardado</h3>
+        <a href="/mensajes/mensaje" class="btn green">VER MENSAJE GUARDADO</a>
+    </div>
+</div>
+
+<!-- Enlace al script de validación -->
+<script src="/js/validation.js"></script>
+
+<%- include('includes/footer.ejs') %>
