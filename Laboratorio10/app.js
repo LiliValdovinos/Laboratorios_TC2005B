@@ -90,7 +90,7 @@ const server = http.createServer((req, res) => {
         res.end();  
 
     } else if (req.method === 'GET' && req.url === '/mensaje') {
-        // Leer mensaje guardado y mostrarlo en una página HTML
+        // Leer mensaje guardado
         fs.readFile('mensaje.txt', 'utf8', (err, data) => {
             res.setHeader('Content-Type', 'text/html');
             if (err) {
@@ -128,7 +128,7 @@ const server = http.createServer((req, res) => {
     }
 });
 
-// Iniciar el servidor en el puerto 4500
+// Iniciar el servidor 4500
 server.listen(PORT, () => {
     console.log(`Servidor ejecutándose en http://localhost:${PORT}`);
 });
