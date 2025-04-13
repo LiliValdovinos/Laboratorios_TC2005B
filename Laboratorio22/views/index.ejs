@@ -1,0 +1,44 @@
+<%- include('includes/head.ejs') %>
+
+<div class="d-flex justify-content-between align-items-center mb-4 pb-3 border-bottom">
+    <h1>Gestor de Archivos</h1>
+    <a href="/subir" class="btn btn-success">
+        <i class="bi bi-upload me-2"></i>Subir Nuevo Archivo
+    </a>
+</div>
+
+<% if (archivos.length > 0) { %>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        <% for (let archivo of archivos) { %>
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <img src="/<%= archivo.ruta %>" class="card-img-top" alt="<%= archivo.titulo %>" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title"><%= archivo.titulo %></h5>
+                        <p class="card-text text-muted small"><%= archivo.ruta %></p>
+                    </div>
+                    <div class="card-footer bg-light d-flex justify-content-between">
+                        <a href="/editar/<%= archivo.id %>?edit=true" class="btn btn-outline-primary btn-sm">
+                            <i class="bi bi-pencil me-1"></i>Editar
+                        </a>
+                        <form action="/eliminar" method="POST">
+                            <input type="hidden" name="id" value="<%= archivo.id %>">
+                            <button type="submit" class="btn btn-outline-danger btn-sm">
+                                <i class="bi bi-trash me-1"></i>Eliminar
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+    </div>
+<% } else { %>
+    <div class="text-center p-5 bg-light rounded shadow-sm">
+        <i class="bi bi-images display-1 text-muted mb-3"></i>
+        <h2>No hay archivos</h2>
+        <p class="text-muted">¡Comienza subiendo tu primer archivo!</p>
+        <a href="/subir" class="btn btn-primary mt-3">
+            <i class="bi bi-upload me-2"></i>Subir Archivo
+        </a>
+    </div>
+<% } %>

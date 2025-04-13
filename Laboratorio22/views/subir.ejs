@@ -1,0 +1,72 @@
+<%- include('includes/head.ejs') %>
+
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <div class="card shadow">
+            <div class="card-header bg-primary text-white">
+                <h4 class="mb-0"><%= editing ? 'Editar Archivo' : 'Subir Nuevo Archivo' %></h4>
+            </div>
+            <div class="card-body">
+                
+                <% if (typeof errorMessage !== 'undefined') { %>
+                    <div class="alert alert-danger" role="alert">
+                        <%= errorMessage %>
+                    </div>
+                <% } %>
+                
+                <form action="<%= editing ? '/editar-archivo' : '/archivo' %>" method="POST" enctype="multipart/form-data">
+                    <% if (editing) { %>
+                        <input type="hidden" name="id" value="<%= archivo.id %>">
+                    <% } %>
+                    
+                    <div class="mb-3">
+                        <label for="titulo" class="form-label">Título</label>
+                        <input 
+                            type="text" 
+                            class="form-control"
+                            name="titulo" 
+                            id="titulo" 
+                            required
+                            value="<%= editing ? archivo.titulo : '' %>"
+                        >
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="archivo" class="form-label">Archivo</label>
+                        <input 
+                            class="form-control"
+                            type="file" 
+                            name="archivo" 
+                            id="archivo" 
+                            <%= editing ? '' : 'required' %>
+                        >
+                        <div class="form-text text-muted">Formatos permitidos: PNG, JPG, JPEG</div>
+                    </div>
+                    
+                    <% if (editing && archivo.ruta) { %>
+                        <div class="mb-4 p-3 border rounded bg-light">
+                            <p class="fw-bold">Archivo actual:</p>
+                            <div class="text-center mb-3">
+                                <img src="/<%= archivo.ruta %>" alt="<%= archivo.titulo %>" class="img-fluid rounded" style="max-height: 300px;">
+                            </div>
+                            <div class="form-text text-info">
+                                <i class="bi bi-info-circle me-1"></i>
+                                Si no seleccionas un nuevo archivo, se mantendrá el actual.
+                            </div>
+                        </div>
+                    <% } %>
+                    
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <a href="/" class="btn btn-secondary me-md-2">
+                            <i class="bi bi-arrow-left me-1"></i>Cancelar
+                        </a>
+                        <button type="submit" class="btn btn-success">
+                            <i class="bi bi-<%= editing ? 'check2-circle' : 'upload' %> me-1"></i>
+                            <%= editing ? 'Actualizar Archivo' : 'Subir Archivo' %>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
