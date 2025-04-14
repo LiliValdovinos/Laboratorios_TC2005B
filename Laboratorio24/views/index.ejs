@@ -1,0 +1,94 @@
+<%- include('includes/head.ejs') %>
+
+<div class="d-flex justify-content-between align-items-center mb-4 pb-3 border-bottom">
+    <h1>Gestor de Archivos (AJAX)</h1>
+    <button id="btn-nueva-subida" class="btn btn-success">
+        <i class="bi bi-upload me-2"></i>Subir Nuevo Archivo
+    </button>
+</div>
+
+<!-- Contenedor para mensajes -->
+<div id="mensajes-container"></div>
+
+<!-- Modal para subir/editar archivos -->
+<div class="modal fade" id="archivoModal" tabindex="-1" aria-labelledby="archivoModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="archivoModalLabel">Subir Nuevo Archivo</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Contenedor para mensajes de error del formulario -->
+                <div id="form-mensajes"></div>
+                
+                <!-- Formulario -->
+                <form id="archivo-form" enctype="multipart/form-data">
+                    <input type="hidden" id="archivo-id" name="id" value="">
+                    
+                    <div class="mb-3">
+                        <label for="titulo" class="form-label">Título</label>
+                        <input 
+                            type="text" 
+                            class="form-control"
+                            name="titulo" 
+                            id="titulo" 
+                            required
+                        >
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="archivo-input" class="form-label">Archivo</label>
+                        <input 
+                            class="form-control"
+                            type="file" 
+                            name="archivo" 
+                            id="archivo-input"
+                        >
+                        <div class="form-text text-muted">Formatos permitidos: PNG, JPG, JPEG</div>
+                    </div>
+                    
+                    <div id="preview-container" class="mb-4 p-3 border rounded bg-light d-none">
+                        <p class="fw-bold">Archivo actual:</p>
+                        <div class="text-center mb-3">
+                            <img id="archivo-preview" src="" alt="" class="img-fluid rounded" style="max-height: 300px;">
+                        </div>
+                        <div class="form-text text-info">
+                            <i class="bi bi-info-circle me-1"></i>
+                            Si no seleccionas un nuevo archivo, se mantendrá el actual.
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" id="btn-guardar" class="btn btn-success">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Contenedor para la lista de archivos -->
+<div id="archivos-container">
+    <div class="text-center p-5">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Cargando...</span>
+        </div>
+        <p class="mt-3">Cargando archivos...</p>
+    </div>
+</div>
+
+<!-- Template para mensaje vacio -->
+<template id="empty-template">
+    <div class="text-center p-5 bg-light rounded shadow-sm">
+        <i class="bi bi-images display-1 text-muted mb-3"></i>
+        <h2>No hay archivos</h2>
+        <p class="text-muted">¡Comienza subiendo tu primer archivo!</p>
+        <button id="btn-empty-upload" class="btn btn-primary mt-3">
+            <i class="bi bi-upload me-2"></i>Subir Archivo
+        </button>
+    </div>
+</template>
+
+<!-- Script para funcionalidad AJAX -->
+<script src="/js/archivos-ajax.js"></script>
