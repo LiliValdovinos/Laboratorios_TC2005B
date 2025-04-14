@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integración con Google Maps API</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-3 mb-4">
+        <div class="container">
+            <h1>Integración con Google Maps API</h1>
+            <p>Exploración de servicios de terceros en aplicaciones web</p>
+        </div>
+    </header>
+
+    <div class="container mb-5">
+        <div class="row mb-4">
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-header bg-light">
+                        <h3 class="card-title h5">Controles del mapa</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="location-search" placeholder="Buscar ubicación...">
+                            <button class="btn btn-primary" id="search-button">Buscar</button>
+                        </div>
+                        
+                        <h4 class="h6 mt-4">Añadir ubicación favorita</h4>
+                        <input type="text" class="form-control mb-2" id="favorite-name" placeholder="Nombre de la ubicación">
+                        <input type="text" class="form-control mb-2" id="favorite-address" placeholder="Dirección o coordenadas">
+                        <button class="btn btn-outline-primary" id="add-favorite">Añadir a favoritos</button>
+                        
+                        <h4 class="h6 mt-4">Opciones del mapa</h4>
+                        <select class="form-select mb-2" id="map-type">
+                            <option value="roadmap">Mapa estándar</option>
+                            <option value="satellite">Satélite</option>
+                            <option value="hybrid">Híbrido</option>
+                            <option value="terrain">Terreno</option>
+                        </select>
+                        <button class="btn btn-outline-secondary" id="find-my-location">Mi ubicación actual</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-8">
+                <div id="map" class="border rounded" style="height: 450px; width: 100%;"></div>
+            </div>
+        </div>
+        
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header bg-light">
+                        <h3 class="h5">Ubicaciones favoritas</h3>
+                    </div>
+                    <div class="card-body">
+                        <div id="favorites-container">
+                            <div class="location-item p-2 border-bottom" data-lat="40.7128" data-lng="-74.0060">Nueva York, EE.UU.</div>
+                            <div class="location-item p-2 border-bottom" data-lat="48.8566" data-lng="2.3522">París, Francia</div>
+                            <div class="location-item p-2 border-bottom" data-lat="35.6762" data-lng="139.6503">Tokio, Japón</div>
+                            <div class="location-item p-2 border-bottom" data-lat="-33.8688" data-lng="151.2093">Sídney, Australia</div>
+                            <div class="location-item p-2" data-lat="19.4326" data-lng="-99.1332">Ciudad de México, México</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header bg-light">
+                        <h2 class="h4">Ventajas y Desventajas de la Integración con Servicios de Terceros</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3 class="h5 text-success">Ventajas:</h3>
+                                <ol>
+                                    <li><strong>Funcionalidad avanzada sin desarrollo desde cero:</strong> Acceso a servicios sofisticados como mapas, procesamiento de pagos o analíticas sin tener que construirlos.</li>
+                                    <li><strong>Reducción de tiempo y costos de desarrollo:</strong> El uso de APIs elimina la necesidad de reinventar la rueda, acelerando el tiempo de lanzamiento.</li>
+                                    <li><strong>Escalabilidad y confiabilidad:</strong> Los servicios de grandes empresas suelen tener infraestructuras robustas que pueden manejar grandes volúmenes de tráfico.</li>
+                                    <li><strong>Mantenimiento y actualizaciones:</strong> El proveedor se encarga de mantener y mejorar el servicio, liberando recursos del equipo de desarrollo.</li>
+                                    <li><strong>Especialización:</strong> Acceso a tecnologías especializadas desarrolladas por expertos en campos específicos.</li>
+                                    <li><strong>Comunidad y soporte:</strong> APIs populares suelen tener comunidades activas, documentación extensa y ejemplos de implementación.</li>
+                                </ol>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <h3 class="h5 text-danger">Desventajas:</h3>
+                                <ol>
+                                    <li><strong>Dependencia de terceros:</strong> Si el servicio falla o cambia, tu aplicación puede verse afectada sin control directo sobre la solución.</li>
+                                    <li><strong>Costos a largo plazo:</strong> Muchas APIs tienen modelos de pago por uso que pueden volverse costosos a medida que la aplicación crece.</li>
+                                    <li><strong>Limitaciones y restricciones:</strong> Cuotas de uso, limitaciones técnicas y características bloqueadas pueden restringir la funcionalidad deseada.</li>
+                                    <li><strong>Problemas de privacidad y seguridad:</strong> Compartir datos con terceros implica riesgos y requisitos de cumplimiento adicionales.</li>
+                                    <li><strong>Cambios en la API:</strong> Los proveedores pueden modificar o descontinuar sus APIs, forzando actualizaciones no planificadas.</li>
+                                    <li><strong>Latencia y rendimiento:</strong> Llamadas a servicios externos pueden incrementar los tiempos de carga y crear puntos de fallo adicionales.</li>
+                                    <li><strong>Personalización limitada:</strong> Es posible que no puedas adaptar completamente el servicio a tus necesidades específicas.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Tu script personalizado -->
+    <script src="app.js"></script>
+    
+    <!-- En una implementación real, incluiríamos la API de Google Maps con nuestra clave API -->
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=API_KEY&callback=initMap" async defer></script> -->
+</body>
+</html>
